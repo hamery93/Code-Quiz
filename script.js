@@ -56,9 +56,10 @@ var hideSecondEl= document.getElementById("hideButton");
 // Object containing quiz questions
 
 function startQuiz() {
-  //come back and see if I can make start screen hide/appear
-
+  
+//Hides game options
   hideFirstEl.style.display ="none";
+  hideSecondEl.style.display ="none";
   
 
   timerID = setInterval(clockTick, 1000)
@@ -107,7 +108,10 @@ function questionClick() {
 }
 
 function quizEnd() {
-  //can also do hide/show of screen
+  
+  //Shows game options
+  hideFirstEl.style.display ="block";
+  hideSecondEl.style.display="block";
 
   clearInterval(timerID)
   finalScoreEl.textContent = (timeLeft + "  This is your final score!")
@@ -121,6 +125,6 @@ function clockTick() {
   }
 
 }
-//save high score function if we want to save to local storage
 
+//Click event that begins quiz
 quizStart.onclick = startQuiz
