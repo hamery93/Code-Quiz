@@ -53,7 +53,6 @@ var finalButtonsEl= document.getElementById("finalButtons");
 var hideFirstEl= document.getElementById("hideFirst");
 var hideSecondEl= document.getElementById("hideButton");
 
-// Object containing quiz questions
 
 function startQuiz() {
   
@@ -112,6 +111,8 @@ function quizEnd() {
   //Shows game options
   hideFirstEl.style.display ="block";
   hideSecondEl.style.display="block";
+  questionEl.style.display="none";
+  timerCountdown.style.display="none";
 
   clearInterval(timerID)
   finalScoreEl.textContent = (timeLeft + "  This is your final score!")
@@ -125,6 +126,7 @@ function clockTick() {
   }
 
 }
+
 
 //Click event that begins quiz
 quizStart.onclick = startQuiz
