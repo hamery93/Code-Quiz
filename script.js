@@ -50,11 +50,16 @@ var choicesEl = document.getElementById("choices");
 var feedbackEl = document.getElementById("feedback");
 var finalScoreEl = document.getElementById("finalScore");
 var finalButtonsEl= document.getElementById("finalButtons");
+var hideFirstEl= document.getElementById("hideFirst");
+var hideSecondEl= document.getElementById("hideButton");
 
 // Object containing quiz questions
 
 function startQuiz() {
   //come back and see if I can make start screen hide/appear
+
+  hideFirstEl.style.display ="none";
+  
 
   timerID = setInterval(clockTick, 1000)
 
